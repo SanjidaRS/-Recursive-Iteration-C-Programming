@@ -1,0 +1,21 @@
+lab3a: iterativeFibonacci.o recursiveFibonacci.o iterativeFindMax.o recursiveFindMax.o lab3aMain.o
+	gcc iterativeFibonacci.o recursiveFibonacci.o iterativeFindMax.o recursiveFindMax.o lab3aMain.c -o lab3a
+
+iterativeFibonacci.o: iterativeFibonacci.c
+	gcc -Wall -std=c99 -c iterativeFibonacci.c
+
+recursiveFibonacci.o: recursiveFibonacci.c
+	gcc -Wall -std=c99 -c recursiveFibonacci.c
+
+iterativeFindMax.o: iterativeFindMax.c
+	gcc -Wall -std=c99 -c iterativeFindMax.c
+
+recursiveFindMax.o: recursiveFindMax.c
+	gcc -Wall -std=c99 -c recursiveFindMax.c
+
+lab3aMain.o: lab3aMain.c
+	gcc -Wall -std=c99 -c lab3aMain.c
+
+clean:
+	rm -f *.o lab3a
+
